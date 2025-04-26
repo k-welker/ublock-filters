@@ -1,0 +1,16 @@
+cmp.heise.de
+||reddit.com^$removeparam=tl
+! YT Nazis und Bullshit
+!youtube.com###dismissible:has-text(/BILD|WELT|NIUS|AfD|ntv |Rieck|Reichelt/)
+!youtube.com###dismissible:has-text(/Paluten/)
+! endscreen
+!/annotations_module.js$script,xhr,important,domain=youtube.com
+!/endscreen.js$script,xhr,important,domain=youtube.com
+! consent
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
+youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
+youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
+youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
