@@ -1,5 +1,6 @@
 cmp.heise.de
-!heise.de##div[data-component="MarketingTeaserModule"]
+heise.de##div[data-component="MarketingTeaserModule"]
+computerbase.de##footer.footer.non-critical
 ||reddit.com^$removeparam=tl
 ! YT Nazis und Bullshit
 youtube.com###dismissible:has-text(/BILD|WELT|NIUS|AfD|ntv |Rieck|Reichelt/i)
