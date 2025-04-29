@@ -1,5 +1,10 @@
 cmp.heise.de
-heise.de##div[data-component="MarketingTeaserModule"]
+heise.de##div[data-module-name="AdModule"]
+heise.de##div[data-module-name="PodcastModule"]
+heise.de##div[data-module-name="MarketingTeasersModule"]
+heise.de##div[data-module-name="NewsletterModule"]
+heise.de##div[data-module-name="PreisvergleichModule"]
+heise.de##div[data-module-name="SitemapFooterModule"]
 computerbase.de##footer.footer.non-critical
 ||reddit.com^$removeparam=tl
 ! YT Nazis und Bullshit
