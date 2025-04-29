@@ -1,9 +1,10 @@
 cmp.heise.de
 heise.de##div[data-component="MarketingTeaserModule"]
+heise.de##div:has-text(/Anzeige|Werbung/i)
 ||reddit.com^$removeparam=tl
 ! YT Nazis und Bullshit
-youtube.com###dismissible:has-text(/BILD|WELT|NIUS|AfD|ntv |Rieck|Reichelt/)
-youtube.com###dismissible:has-text(/Paluten/)
+youtube.com###dismissible:has-text(/BILD|WELT|NIUS|AfD|ntv |Rieck|Reichelt/i)
+youtube.com###dismissible:has-text(/Paluten/i)
 ! endscreen
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
