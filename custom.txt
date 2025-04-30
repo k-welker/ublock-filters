@@ -24,3 +24,5 @@ youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.intersti
 ! amazon 
 amazon.de##span.global-reviews-all
 amazon.de##.rhf-frame
+amazon.de#navFooter
+amazon.de#legalEUBtf_feature_div
