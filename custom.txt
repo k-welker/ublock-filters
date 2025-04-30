@@ -21,3 +21,5 @@ youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
 youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
+! amazon 
+amazon.de##span.global-reviews-all
