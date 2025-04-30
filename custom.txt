@@ -23,3 +23,4 @@ youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.de
 youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 ! amazon 
 amazon.de##span.global-reviews-all
+amazon.de##div#rhf-shoveler
