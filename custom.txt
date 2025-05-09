@@ -1,20 +1,46 @@
+amazon.de##.rhf-frame
+amazon.de#navFooter
+amazon.de#legalEUBtf_feature_div
+amazon.de###navFooter
+amazon.de##.global-reviews-all
+amazon.de##.cr-widget-DesktopGlobalReviews
 cmp.heise.de
+computerbase.de##.js-show-cookie-consent
+computerbase.de##.js-consent
+computerbase.de##.support-us
+computerbase.de##.support-plea
+computerbase.de##.adbox--with-label
+computerbase.de##.footer
+/js/main.*.js$script,domain=computerbase.de
+google.*##[id^="eob_"]
+google.*##^script:has-text(consentCookiePayload)
+google.*##+js(acis, document.cookie, YES+)
+google.*##+js(aeld, DOMContentLoaded, CONSENT)
 heise.de##div[data-module-name="AdModule"]
 heise.de##div[data-module-name="PodcastModule"]
 heise.de##div[data-module-name="MarketingTeasersModule"]
 heise.de##div[data-module-name="NewsletterModule"]
 heise.de##div[data-module-name="PreisvergleichModule"]
 heise.de##div[data-module-name="SitemapFooterModule"]
-computerbase.de##footer.footer.non-critical
+mydealz.de##.footer
+mydealz.de##div.js-idealo-section
+mydealz.de##section.js-keyword-alerts
 ||reddit.com^$removeparam=tl
+spiegel.de##[data-area="article-teaser-list"] > div:has( a[href*="bento.de"] )
+spiegel.de##[data-area="article-teaser-list"] > div:has( [id*="splus"] )
+spiegel.de##[data-area="*podlove"]
+spiegel.de##[data-area="block>audio:podcasts"]
+spiegel.de##[data-area="vouchers"]
+spiegel.de##[data-component="Quiz"]
+spiegel.de##:xpath(//article[.//header//span[contains(@data-contains-flags,"paid")]])
+spiegel.de##:xpath(//li[.//span[contains(@data-contains-flags,"paid")]])
+spiegel.de##:xpath(//article[.//span[contains(@data-contains-flags,"paid")]])
 ! YT Nazis und Bullshit
-youtube.com###dismissible:has-text(/BILD|WELT|NIUS|AfD|ntv |Rieck|Reichelt/i)
+youtube.com###dismissible:has-text(/BILD|WELT|NiUS|AfD|ntv |Rieck|Reichelt|Aktien mit Kopf|Apollo News|/i)
 youtube.com###dismissible:has-text(/MrBeast|Paluten|Sky Sport|RTL Sport|FIFA|UEFA|Fu(.*)ball|Einfach Erklärt|Roblox|Minecraft/i)
 youtube.com#offer-module
-! endscreen
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
-! consent
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
 youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
@@ -22,8 +48,5 @@ youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
 youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
-! amazon 
-amazon.de##span.global-reviews-all
-amazon.de##.rhf-frame
-amazon.de#navFooter
-amazon.de#legalEUBtf_feature_div
+youtube-nocookie.com,youtube.com##.ytp-pause-overlay, .show-video-thumbnail-button
+youtube-nocookie.com,youtube.com##iframe ~ #topvbar > #rvid
