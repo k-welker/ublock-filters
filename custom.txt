@@ -36,8 +36,8 @@ spiegel.de##:xpath(//article[.//header//span[contains(@data-contains-flags,"paid
 spiegel.de##:xpath(//li[.//span[contains(@data-contains-flags,"paid")]])
 spiegel.de##:xpath(//article[.//span[contains(@data-contains-flags,"paid")]])
 ! YT Nazis und Bullshit
-youtube.com###dismissible:has-text(/BILD|WELT|NiUS|AfD|ntv|Rieck|Reichelt|MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|Minecraft|laserluca/)
-youtube.com###dismissible:has-text(/Aktien.*Kopf|Apollo.News|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/)
+!youtube.com###dismissible:has-text(/BILD|WELT|NiUS|AfD|ntv|Rieck|Reichelt|MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|Minecraft|laserluca/)
+!youtube.com###dismissible:has-text(/Aktien.*Kopf|Apollo.News|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/)
 youtube.com#offer-module
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
