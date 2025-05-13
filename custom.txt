@@ -35,9 +35,74 @@ spiegel.de##[data-component="Quiz"]
 spiegel.de##:xpath(//article[.//header//span[contains(@data-contains-flags,"paid")]])
 spiegel.de##:xpath(//li[.//span[contains(@data-contains-flags,"paid")]])
 spiegel.de##:xpath(//article[.//span[contains(@data-contains-flags,"paid")]])
+! YT consent
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
+youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
+youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
+youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 ! YT Nazis und Bullshit
 youtube.com#offer-module
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
 youtube.com##ytd-compact-video-renderer:has-text(/BILD|WELT|NiUS|AfD|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
 youtube.com##ytd-compact-video-renderer:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
+! YT Homepage and Subscriptions (Grid View) - Hide the Shorts section
+youtube.com##[is-shorts]
+! YT Menu - Hide the Shorts button
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+! YT Search - Hide Shorts
+www.youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"])
+! YT Search, Channels, Subscriptions (List View) and Sidebar/Below Player Recommendations - Hide the Shorts sections
+www.youtube.com##ytd-reel-shelf-renderer
+! YT Channels - Hide the Shorts tab
+www.youtube.com##[tab-title="Shorts"]
+! YT Subscriptions - Hide Shorts - Grid View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+! YT Subscriptions - Hide Shorts - List View
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"])
+! YT Subscriptions - New Layout - Hide Shorts
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+! YT Sidebar - Hide Shorts
+www.youtube.com###related ytd-compact-video-renderer:has([overlay-style="SHORTS"])
+! YT Mobile - Hide the Shorts Menu button
+m.youtube.com##ytm-pivot-bar-item-renderer:has(>.pivot-shorts)
+! YT Mobile - Hide the Shorts sections
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-rich-section-renderer:has([d^="M17.77,10.32l-1.2"])
+! YT Mobile - Hide Shorts in search results
+m.youtube.com##ytm-search ytm-video-with-context-renderer:has([data-style="SHORTS"])
+! YT Mobile - Hide the Shorts button on Channels
+m.youtube.com##[tab-title="Shorts"]
+! Removes Mixes from the Main Page
+youtube.com##ytd-rich-item-renderer:has([href$="start_radio=1"])
+! Removes Mixes from the right side panel
+youtube.com##ytd-compact-radio-renderer
+! Removes Mixes from the right side panel (Dec 2024)
+youtube.com###related yt-lockup-view-model:has([href*="&start_radio=1&"])
+! Removes Mixes from search results
+youtube.com##ytd-radio-renderer
+! Removes Mixes from search results (Dec 2024)
+youtube.com##ytd-search yt-lockup-view-model:has([href$="&start_radio=1"][aria-label])
+! Removes Mixes from Video End Cards
+youtube.com##.ytp-videowall-still[data-is-mix="true"]
+! Removes "YouTube" (Music) playlists from the right side panel
+youtube.com##ytd-compact-playlist-renderer:has([title^="YouTube"])
+! YT Live Videos
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer):has(.badge-style-type-live-now-alternate)
+! YT Streamed
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer):has([aria-label~="Streamed"])
+! YT Streamed (backup version - less efficient)
+www.youtube.com##:is(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer):not(:has([aria-label~="Streamed"])) #metadata-line>span:last-of-type:has-text(Streamed):upward(ytd-rich-item-renderer,ytd-grid-video-renderer,ytd-compact-video-renderer,ytd-item-section-renderer,ytd-video-renderer)
+youtube-nocookie.com,youtube.com##.ytp-pause-overlay, .show-video-thumbnail-button
+~youtube-nocookie.com,~youtube.com##iframe ~ #topvbar > #rvid
+! YT Search - keep only videos (no shorts)
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! YT Search - keep only videos (no shorts) and channels
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
+
+! YT Search - keep only videos (no shorts), channels and playlists
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,ytd-channel-renderer,ytd-playlist-renderer,yt-lockup-view-model,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
