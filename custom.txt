@@ -11,6 +11,7 @@ computerbase.de##.support-us
 computerbase.de##.support-plea
 computerbase.de##.adbox--with-label
 computerbase.de##.footer
+computerbase.de##.shoutbox
 /js/main.*.js$script,domain=computerbase.de
 google.*##[id^="eob_"]
 google.*##^script:has-text(consentCookiePayload)
