@@ -48,7 +48,7 @@ youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.intersti
 youtube.com#offer-module
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
-youtube.com##ytd-compact-video-renderer:has-text(/BILD|WELT|NiUS|AfD|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
+youtube.com##ytd-compact-video-renderer:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
 youtube.com##ytd-compact-video-renderer:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
 ! YT Homepage and Subscriptions (Grid View) - Hide the Shorts section
 youtube.com##[is-shorts]
