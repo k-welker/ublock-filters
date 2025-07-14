@@ -1,3 +1,6 @@
+! YT Nazis und Bullshit
+youtube.com##yt-lockup-view-model:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
+youtube.com##yt-lockup-view-model:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
 amazon.de##.rhf-frame
 amazon.de#navFooter
 amazon.de#legalEUBtf_feature_div
@@ -44,12 +47,9 @@ youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
 youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
-! YT Nazis und Bullshit
 youtube.com#offer-module
 /annotations_module.js$script,xhr,important,domain=youtube.com
 /endscreen.js$script,xhr,important,domain=youtube.com
-youtube.com##ytd-compact-video-renderer:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
-youtube.com##ytd-compact-video-renderer:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
 ! YT Homepage and Subscriptions (Grid View) - Hide the Shorts section
 youtube.com##[is-shorts]
 ! YT Menu - Hide the Shorts button
