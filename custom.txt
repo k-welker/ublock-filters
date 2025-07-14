@@ -1,5 +1,5 @@
 ! YT Nazis und Bullshit
-youtube.com##yt-lockup-view-model:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger/i)
+youtube.com##yt-lockup-view-model:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger|Tichy/i)
 youtube.com##yt-lockup-view-model:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
 amazon.de##.rhf-frame
 amazon.de#navFooter
