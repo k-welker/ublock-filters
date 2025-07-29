@@ -15,7 +15,8 @@ computerbase.de##.support-plea
 computerbase.de##.adbox--with-label
 computerbase.de##.footer
 computerbase.de##.shoutbox
-computerbase.de##li.artikel:has-text(Anzeige)
+computerbase.de##.promobar
+computerbase.de##li.article:has(button.article__ad-hide-button)
 /js/main.*.js$script,domain=computerbase.de
 google.*##[id^="eob_"]
 google.*##^script:has-text(consentCookiePayload)
