@@ -15,6 +15,7 @@ computerbase.de##.support-plea
 computerbase.de##.adbox--with-label
 computerbase.de##.footer
 computerbase.de##.shoutbox
+computerbase.de##li.artikel:has-text(Anzeige)
 /js/main.*.js$script,domain=computerbase.de
 google.*##[id^="eob_"]
 google.*##^script:has-text(consentCookiePayload)
@@ -30,15 +31,6 @@ mydealz.de##.footer
 mydealz.de##div.js-idealo-section
 mydealz.de##section.js-keyword-alerts
 ||reddit.com^$removeparam=tl
-spiegel.de##[data-area="article-teaser-list"] > div:has( a[href*="bento.de"] )
-spiegel.de##[data-area="article-teaser-list"] > div:has( [id*="splus"] )
-spiegel.de##[data-area="*podlove"]
-spiegel.de##[data-area="block>audio:podcasts"]
-spiegel.de##[data-area="vouchers"]
-spiegel.de##[data-component="Quiz"]
-spiegel.de##:xpath(//article[.//header//span[contains(@data-contains-flags,"paid")]])
-spiegel.de##:xpath(//li[.//span[contains(@data-contains-flags,"paid")]])
-spiegel.de##:xpath(//article[.//span[contains(@data-contains-flags,"paid")]])
 ! YT consent
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
