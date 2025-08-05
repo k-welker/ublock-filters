@@ -17,6 +17,10 @@ computerbase.de##.footer
 computerbase.de##.shoutbox
 computerbase.de##.promobar
 computerbase.de##li.article:has(button.article__ad-hide-button)
+||genickbruch.com/pics/amazon*
+||genickbruch.com/pics/amz*
+||genickbruch.com/pics/donations*
+||genickbruch.com/pics/socialslogo*
 /js/main.*.js$script,domain=computerbase.de
 google.*##[id^="eob_"]
 google.*##^script:has-text(consentCookiePayload)
