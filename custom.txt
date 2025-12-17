@@ -26,6 +26,10 @@ google.*##[id^="eob_"]
 google.*##^script:has-text(consentCookiePayload)
 google.*##+js(acis, document.cookie, YES+)
 google.*##+js(aeld, DOMContentLoaded, CONSENT)
+heise.de##article:has(svg.plus-logo)
+heise.de##article:has(.heiseplus-logo)
+heise.de##.a-article-teaser:has(.heiseplus-logo)
+heise.de##article:has(a[href*="heise-plus"])
 heise.de##div[data-module-name="AdModule"]
 heise.de##div[data-module-name="PodcastModule"]
 heise.de##div[data-module-name="MarketingTeasersModule"]
