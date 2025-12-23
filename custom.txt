@@ -1,6 +1,6 @@
 ! YT Nazis und Bullshit
 youtube.com##yt-lockup-view-model:has-text(/BILD|WELT|NiUS|AfD|Weidel|ntv|Rieck|Reichelt|Aktien.*Kopf|Apollo.News|Rieger|Tichy/i)
-youtube.com##yt-lockup-view-model:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt/i)
+youtube.com##yt-lockup-view-model:has-text(/MrBeast|Paluten|RTL|FIFA|UEFA|Roblox|laserluca|Sky.Sport|Fu.*ball|Einfach.Erkl.*rt|Amazon.*Prime/i)
 amazon.de##.rhf-frame
 amazon.de#navFooter
 amazon.de#legalEUBtf_feature_div
@@ -102,16 +102,4 @@ youtube-nocookie.com,youtube.com##.ytp-pause-overlay, .show-video-thumbnail-butt
 ~youtube-nocookie.com,~youtube.com##iframe ~ #topvbar > #rvid
 ! YT Search - keep only videos (no shorts)
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
-! Blockiert Artikel basierend auf dem Link-Ziel (stabilste Methode)
-heise.de##article:has(a[href*="/heise-plus/"])
-heise.de##li:has(a[href*="/heise-plus/"])
-heise.de##div.item:has(a[href*="/heise-plus/"])
-heise.de##section:has(a[href*="/heise-plus/"])
 
-! Blockiert Artikel basierend auf Hintergrund-Analysen (Select/Plus)
-heise.de##article:has(a[href*="/hintergrund/"])
-heise.de##li:has(a[href*="/hintergrund/"])
-
-! Spezifische Klassen für Heise Mobile/Desktop Container
-heise.de##.a-article-teaser:has(.a-article-meta__heiseplus-logo)
-heise.de##.ocean-teaser:has(.a-article-meta__heiseplus-logo)
